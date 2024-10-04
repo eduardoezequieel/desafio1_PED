@@ -5,7 +5,6 @@ import { SignInForm } from '../interfaces';
 
 export const signIn = async (formData: SignInForm): Promise<boolean> => {
   const users: User[] = await fetch(`${API_URL}/users`).then((res) => res.json());
-
   const user = users.find(
     (user) => user.username === formData.username && user.password === formData.password
   );

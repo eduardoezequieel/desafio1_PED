@@ -43,7 +43,16 @@ export const SignInForm = () => {
                   Nombre de usuario
                 </Label>
                 <input
-                  {...register('username', { required: 'El nombre de usuario es requerido' })}
+                  {...register('username', {
+                    required: {
+                      value: true,
+                      message: 'El nombre de usuario es requerido',
+                    },
+                    pattern: {
+                      value: /^[a-zA-Z0-9]+$/,
+                      message: 'El nombre de usuario solo puede contener letras y números',
+                    },
+                  })}
                   id="username"
                   type="text"
                   placeholder="Nombre de usuario"
@@ -64,10 +73,7 @@ export const SignInForm = () => {
                 />
                 <ErrorLabel show={!!errors?.password} message={errors?.password?.message} />
               </div>
-              <button
-                type="submit"
-                className="w-full mt-3 px-3 py-4 text-white bg-indigo-500 hover:bg-indigo-600 transition-all rounded-md focus:bg-indigo-600 focus:outline-none"
-              >
+              <button type="submit" className="button-styles w-full mt-3 px-3 py-4">
                 Continuar
               </button>
             </form>

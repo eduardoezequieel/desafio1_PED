@@ -1,4 +1,11 @@
+import { PatientForm, PatientsManagement } from './components';
+
 const PatientsPage = () => {
-  return <div>PatientsPage</div>;
+  return (
+    <>
+      <PatientsManagement />
+      <PatientForm />
+    </>
+  );
 };
 export default PatientsPage;
