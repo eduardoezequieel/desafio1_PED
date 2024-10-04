@@ -4,10 +4,10 @@ export interface Patient {
   id: string;
   firstName: string;
   lastName: string;
-  age: number;
-  genderId: number;
-  bloodTypeId: number;
-  bloodPressureId: number;
+  age: string;
+  genderId: string;
+  bloodTypeId: string;
+  bloodPressureId: string;
   gender: GenericType;
   bloodType: GenericType;
   bloodPressure: GenericType;

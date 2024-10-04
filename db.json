@@ -8,73 +8,82 @@
   ],
   "genders": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Masculino"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Femenino"
     }
   ],
   "bloodTypes": [
     {
-      "id": 1,
+      "id": "1",
       "name": "A"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "B"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "AB"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "O"
     }
   ],
   "bloodPressures": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Alta"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Media"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Baja"
     }
   ],
   "patients": [
     {
-      "id": "aaa0",
       "firstName": "Eduardo",
       "lastName": "Rivera",
-      "age": 30,
-      "genderId": 1,
-      "bloodTypeId": 2,
-      "bloodPressureId": 2
+      "age": "30",
+      "genderId": "1",
+      "bloodTypeId": "2",
+      "bloodPressureId": "2",
+      "id": "aaa0"
     },
     {
       "firstName": "Fernanda",
       "lastName": "Joséeee",
-      "age": 30,
-      "genderId": 2,
-      "bloodTypeId": 4,
-      "bloodPressureId": 1,
+      "age": "30",
+      "genderId": "2",
+      "bloodTypeId": "4",
+      "bloodPressureId": "1",
       "id": "c260"
     },
     {
       "firstName": "Diego",
       "lastName": "Esnard",
-      "age": 15,
-      "genderId": 1,
-      "bloodTypeId": 2,
-      "bloodPressureId": 2,
+      "age": "15",
+      "genderId": "1",
+      "bloodTypeId": "2",
+      "bloodPressureId": "2",
       "id": "a9b1"
+    },
+    {
+      "firstName": "tesrt",
+      "lastName": "asd",
+      "age": "13",
+      "genderId": "2",
+      "bloodTypeId": "1",
+      "bloodPressureId": "2",
+      "id": "331d"
     }
   ]
 }

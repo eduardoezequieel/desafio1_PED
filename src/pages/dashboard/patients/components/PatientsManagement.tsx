@@ -86,22 +86,22 @@ export const PatientsManagement = () => {
                   Género
                 </span>
                 <span
-                  className={`rounded py-1 px-3 text-xs font-bold ${patient.genderId === 1 ? 'bg-red-400' : 'bg-blue-400'}`}
+                  className={`rounded py-1 px-3 text-xs font-bold ${patient.genderId === '1' ? 'bg-red-400' : 'bg-blue-400'}`}
                 >
-                  {patient.gender.name}
+                  {patient.gender?.name}
                 </span>
               </td>
               <td className="w-full dark:border-gray-500 lg:w-auto p-3 text-gray-800 dark:text-white text-center border border-b block lg:table-cell relative lg:static">
                 <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">
                   Tipo de sangre
                 </span>
-                {patient.bloodType.name}
+                {patient.bloodType?.name}
               </td>
               <td className="w-full dark:border-gray-500 lg:w-auto p-3 text-gray-800 dark:text-white text-center border border-b block lg:table-cell relative lg:static">
                 <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">
                   Nivel de presión
                 </span>
-                {patient.bloodPressure.name}
+                {patient.bloodPressure?.name}
               </td>
               <td className="w-full dark:border-gray-500 lg:w-auto p-3 text-gray-800 dark:text-white text-center border border-b block lg:table-cell relative lg:static">
                 <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">

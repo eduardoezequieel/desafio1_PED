@@ -27,10 +27,6 @@ export const createPatient = async (formData: PatientForm) => {
     },
     body: JSON.stringify({
       ...formData,
-      age: parseInt(formData.age),
-      genderId: parseInt(formData.genderId),
-      bloodTypeId: parseInt(formData.bloodTypeId),
-      bloodPressureId: parseInt(formData.bloodPressureId),
     }),
   });
 
@@ -51,10 +47,6 @@ export const updatePatient = async ({
     },
     body: JSON.stringify({
       ...formData,
-      age: parseInt(formData.age),
-      genderId: parseInt(formData.genderId),
-      bloodTypeId: parseInt(formData.bloodTypeId),
-      bloodPressureId: parseInt(formData.bloodPressureId),
     }),
   });
 
@@ -65,6 +57,8 @@ export const getPatients = async () => {
   const patients: Patient[] = await fetch(
     `${API_URL}/patients/?_embed=gender&_embed=bloodType&_embed=bloodPressure`
   ).then((res) => res.json());
+
+  console.log(patients);
 
   return patients;
 };
