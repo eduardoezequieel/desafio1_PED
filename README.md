@@ -29,4 +29,4 @@ Para ejecutar una instancia del servidor en producción, ejecutar los siguientes
 > serve -s dist -l 5000
 > ```
 
-- No olvidar ejecutar `npm run json-db` en otro terminal para tener disponible la API REST.
+- No olvidar ejecutar `npm run json-db` en otro terminal para tener disponible la API REST. Asi tendríamos la aplicación corriendo en el puerto 5000.
