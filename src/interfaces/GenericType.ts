@@ -1,4 +1,5 @@
 export interface GenericType {
-  id: number;
+  id: string;
   name: string;
+  description?: string;
 }

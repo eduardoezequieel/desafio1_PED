@@ -19,19 +19,23 @@
   "bloodTypes": [
     {
       "id": "1",
-      "name": "A"
+      "name": "A",
+      "description": "Mayor riesgo de desarrollar hipertensión y enfermedades cardiovasculares."
     },
     {
       "id": "2",
-      "name": "B"
+      "name": "B",
+      "description": "Las personas con este tipo de sangre tienen un 11% más de riesgo de sufrir enfermedades cardiovasculares en comparación con las personas con tipo O. Esto se debe a los altos niveles del factor von Willebrand, relacionado con la coagulación de la sangre."
     },
     {
       "id": "3",
-      "name": "AB"
+      "name": "AB",
+      "description": "Este tipo de sangre presenta el mayor riesgo, con un 23% más de probabilidad de desarrollar enfermedades cardiovasculares en comparación con las personas con tipo O."
     },
     {
       "id": "4",
-      "name": "O"
+      "name": "O",
+      "description": "Las personas con este tipo de sangre tienen un menor riesgo de hipertensión y problemas cardiovasculares, pero no están completamente exentas de riesgo. Otros factores, como el estilo de vida y la genética, también influyen."
     }
   ],
   "bloodPressures": [
@@ -51,7 +55,7 @@
   "patients": [
     {
       "firstName": "Eduardo",
-      "lastName": "Rivera",
+      "lastName": "López",
       "age": "30",
       "genderId": "1",
       "bloodTypeId": "2",
@@ -60,7 +64,7 @@
     },
     {
       "firstName": "Fernanda",
-      "lastName": "Joséeee",
+      "lastName": "Jose",
       "age": "30",
       "genderId": "2",
       "bloodTypeId": "4",
@@ -68,22 +72,76 @@
       "id": "c260"
     },
     {
+      "id": "a9b1",
       "firstName": "Diego",
       "lastName": "Esnard",
       "age": "15",
       "genderId": "1",
       "bloodTypeId": "2",
-      "bloodPressureId": "2",
-      "id": "a9b1"
+      "bloodPressureId": "2"
     },
     {
-      "firstName": "tesrt",
-      "lastName": "asd",
-      "age": "13",
+      "id": "331d",
+      "firstName": "María",
+      "lastName": "González",
+      "age": "22",
       "genderId": "2",
       "bloodTypeId": "1",
-      "bloodPressureId": "2",
-      "id": "331d"
+      "bloodPressureId": "3"
+    },
+    {
+      "id": "6980",
+      "firstName": "Juan",
+      "lastName": "Pérez",
+      "age": "44",
+      "genderId": "1",
+      "bloodTypeId": "4",
+      "bloodPressureId": "3"
+    },
+    {
+      "id": "888c",
+      "firstName": "Lucía",
+      "lastName": "Ramírez",
+      "age": "30",
+      "genderId": "2",
+      "bloodTypeId": "3",
+      "bloodPressureId": "1"
+    },
+    {
+      "id": "f789",
+      "firstName": "Roberto",
+      "lastName": "Sánchez",
+      "age": "55",
+      "genderId": "1",
+      "bloodTypeId": "1",
+      "bloodPressureId": "1"
+    },
+    {
+      "id": "g012",
+      "firstName": "Elena",
+      "lastName": "Martínez",
+      "age": "28",
+      "genderId": "2",
+      "bloodTypeId": "2",
+      "bloodPressureId": "2"
+    },
+    {
+      "id": "h345",
+      "firstName": "Miguel",
+      "lastName": "García",
+      "age": "35",
+      "genderId": "1",
+      "bloodTypeId": "3",
+      "bloodPressureId": "2"
+    },
+    {
+      "id": "i678",
+      "firstName": "Sofía",
+      "lastName": "López",
+      "age": "40",
+      "genderId": "2",
+      "bloodTypeId": "4",
+      "bloodPressureId": "1"
     }
   ]
 }

@@ -33,3 +33,22 @@
 .modal__close-button {
   @apply !bg-transparent;
 }
+
+.rd3t-leaf-node {
+  stroke: #818cf8 !important;
+}
+
+.rd3t-node {
+  stroke: #818cf8 !important;
+  fill: #818cf8 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rd3t-link {
+    stroke: #fff !important;
+  }
+
+  .rd3t-label__title {
+    fill: #fff !important;
+  }
+}

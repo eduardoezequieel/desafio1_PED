@@ -15,7 +15,7 @@ export const Sidebar = () => {
   };
 
   return (
-    <div className="p-5 flex flex-col justify-between w-[230px] border-r-[1px] bg-white dark:bg-neutral-900 border-gray-300 dark:border-gray-800 fixed h-screen">
+    <div className="p-5 flex flex-col justify-between w-[230px] border-r-[1px] bg-white dark:bg-neutral-900 border-gray-300 dark:border-neutral-700 fixed h-screen">
       <div className="flex flex-col">
         <div className="flex gap-2 border-indigo-500 border w-fit px-3 py-2 rounded-sm">
           <span className="dark:text-white text-black">{signedUser?.username}</span>

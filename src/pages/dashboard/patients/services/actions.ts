@@ -58,8 +58,6 @@ export const getPatients = async () => {
     `${API_URL}/patients/?_embed=gender&_embed=bloodType&_embed=bloodPressure`
   ).then((res) => res.json());
 
-  console.log(patients);
-
   return patients;
 };
 

@@ -3,9 +3,10 @@ import cookies from 'js-cookie';
 import SignInPage from '../pages/sign-in';
 import { User } from '../interfaces';
 import { useAuthStore } from '../store';
-import DashboardPage from '../pages/dashboard';
+import DashboardLayout from '../pages/dashboard/layout';
 import { useEffect } from 'react';
 import PatientsPage from '../pages/dashboard/patients';
+import { DashboardPage } from '../pages/dashboard';
 
 const PrivateRoute = ({ element }: { element: React.ReactNode }) => {
   const { setSignedUser } = useAuthStore();
@@ -33,11 +34,15 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <PrivateRoute element={<DashboardPage />} />,
+    element: <PrivateRoute element={<DashboardLayout />} />,
     children: [
       {
         index: true,
-        element: <Navigate to="patients" />,
+        element: <Navigate to="/dashboard/home" />,
+      },
+      {
+        path: 'home',
+        element: <DashboardPage />,
       },
       {
         element: <PatientsPage />,
