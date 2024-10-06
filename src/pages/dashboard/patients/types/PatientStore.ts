@@ -1,4 +1,4 @@
-import { Patient } from './Patient';
+import { Patient } from '../models/Patient';
 
 export interface PatientStore {
   isModalOpen: boolean;

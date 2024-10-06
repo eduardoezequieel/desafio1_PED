@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { getPatientsByEntity } from '../services';
-import { NodeItem } from '../../../interfaces';
+import { NodeItem } from '../../../models';
 import Tree from 'react-d3-tree';
+import { DashboardService } from '../services';
 
 type Props = {
   entity: 'genders' | 'bloodTypes' | 'bloodPressures';
@@ -17,7 +17,7 @@ export const StatisticByEntity = ({ entity }: Props) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await getPatientsByEntity({
+      const response = await DashboardService.getPatientsByEntity({
         entity,
       });
       setPatientsByEntity(response);

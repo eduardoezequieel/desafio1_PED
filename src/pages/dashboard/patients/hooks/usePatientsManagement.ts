@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Patient } from '../interfaces';
 import { usePatientStore } from '../store';
-import { getPatients } from '../services';
+import { Patient } from '../models';
+import { PatientService } from '../services';
 
 export const usePatientsManagement = () => {
   const { isModalOpen } = usePatientStore();
@@ -10,7 +10,7 @@ export const usePatientsManagement = () => {
 
   useEffect(() => {
     const fetchPatients = async () => {
-      const patients = await getPatients();
+      const patients = await PatientService.getPatients();
       setPatients(patients);
     };
 

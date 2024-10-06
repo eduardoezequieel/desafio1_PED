@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { getPatientsByEntity } from '../services';
-import { NodeItem } from '../../../interfaces';
+import { NodeItem } from '../../../models';
 import Tree from 'react-d3-tree';
+import { DashboardService } from '../services';
 
 type GeneralStatisticsType = {
   genders: NodeItem[];
@@ -18,13 +18,13 @@ export const GeneralStatistics = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const genders = await getPatientsByEntity({
+      const genders = await DashboardService.getPatientsByEntity({
         entity: 'genders',
       });
-      const bloodTypes = await getPatientsByEntity({
+      const bloodTypes = await DashboardService.getPatientsByEntity({
         entity: 'bloodTypes',
       });
-      const bloodPressures = await getPatientsByEntity({
+      const bloodPressures = await DashboardService.getPatientsByEntity({
         entity: 'bloodPressures',
       });
 
@@ -69,10 +69,10 @@ export const GeneralStatistics = () => {
           }}
           translate={{ x: 800, y: 200 }}
           orientation="vertical"
-          pathFunc="straight" // You can change the path style (e.g., straight, diagonal)
-          nodeSize={{ x: 300, y: 300 }} // Control node size
-          separation={{ siblings: 1, nonSiblings: 1 }} // Control node separation
-          zoomable={true} // Allows zooming in/out
+          pathFunc="straight"
+          nodeSize={{ x: 300, y: 300 }}
+          separation={{ siblings: 1, nonSiblings: 1 }}
+          zoomable={true}
           zoom={0.8}
         />
       )}

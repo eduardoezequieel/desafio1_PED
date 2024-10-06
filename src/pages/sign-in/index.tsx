@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import { User } from '../../interfaces';
+import { User } from '../../models';
 import { SignInForm } from './components';
 import cookies from 'js-cookie';
 import { useAuthStore } from '../../store';

@@ -1,13 +1,13 @@
 import Modal from 'react-minimal-modal';
 import { usePatientStore } from '../store';
 import { ErrorLabel, Label } from '../../../../components';
-import { usePatientForm, usePatientsManagement } from '../hooks';
+import { usePatientForm } from '../hooks';
 import { useForm } from 'react-hook-form';
-import { PatientForm as IPatientForm } from '../interfaces';
-import { createPatient, updatePatient } from '../services';
+import { PatientForm as IPatientForm } from '../types';
 import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
-import { GenericType } from '../../../../interfaces';
+import { GenericType } from '../../../../types';
+import { PatientService } from '../services';
 
 const initialFormState: IPatientForm = {
   firstName: '',
@@ -76,7 +76,7 @@ export const PatientForm = () => {
 
   const onSubmit = async (formData: IPatientForm) => {
     if (modalMode === 'create') {
-      const success = await createPatient(formData);
+      const success = await PatientService.createPatient(formData);
 
       if (!success) {
         toast.error('Ocurrió un error al crear el paciente');
@@ -86,7 +86,7 @@ export const PatientForm = () => {
       toast.success('Paciente creado con éxito');
       closeModal();
     } else if (modalMode === 'edit' && selectedPatient) {
-      const success = await updatePatient({
+      const success = await PatientService.updatePatient({
         formData,
         patientId: selectedPatient.id,
       });

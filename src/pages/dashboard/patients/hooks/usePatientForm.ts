@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { GenericType } from '../../../../interfaces';
 import { usePatientStore } from '../store';
-import { getBloodPressures, getBloodTypes, getGenders } from '../services';
+import { GenericType } from '../../../../types';
+import { PatientService } from '../services';
 
 type PatientFields = {
   genders: GenericType[];
@@ -19,9 +19,9 @@ export const usePatientForm = () => {
 
   useEffect(() => {
     const fetchPatientFields = async () => {
-      const genders = await getGenders();
-      const bloodTypes = await getBloodTypes();
-      const bloodPressures = await getBloodPressures();
+      const genders = await PatientService.getGenders();
+      const bloodTypes = await PatientService.getBloodTypes();
+      const bloodPressures = await PatientService.getBloodPressures();
 
       setPatientFields({
         genders,

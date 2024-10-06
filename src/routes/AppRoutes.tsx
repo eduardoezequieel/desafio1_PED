@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import cookies from 'js-cookie';
 import SignInPage from '../pages/sign-in';
-import { User } from '../interfaces';
+import { User } from '../models';
 import { useAuthStore } from '../store';
 import DashboardLayout from '../pages/dashboard/layout';
 import { useEffect } from 'react';

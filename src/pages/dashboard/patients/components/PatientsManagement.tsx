@@ -1,8 +1,8 @@
 import { CirclePlus } from 'lucide-react';
 import { usePatientStore } from '../store';
 import { usePatientsManagement } from '../hooks';
-import { deletePatient } from '../services';
 import { toast } from 'react-toastify';
+import { PatientService } from '../services';
 
 export const PatientsManagement = () => {
   const { openModal } = usePatientStore();
@@ -12,7 +12,7 @@ export const PatientsManagement = () => {
     const isConfirmed = confirm('¿Estás seguro de eliminar este paciente?');
 
     if (isConfirmed) {
-      const success = await deletePatient(id);
+      const success = await PatientService.deletePatient(id);
 
       if (success) {
         toast.success('Paciente eliminado correctamente');

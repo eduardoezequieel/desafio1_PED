@@ -1,5 +1,4 @@
-export interface User {
-  id: number;
+export type SignInForm = {
   username: string;
   password: string;
-}
+};

@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { PatientStore } from '../interfaces';
+import { PatientStore } from '../types';
 
 export const usePatientStore = create<PatientStore>((set) => ({
   isModalOpen: false,

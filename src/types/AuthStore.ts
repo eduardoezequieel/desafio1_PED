@@ -1,6 +1,6 @@
-import { User } from './User';
+import { User } from '../models/User';
 
-export interface AuthStore {
+export type AuthStore = {
   signedUser: User | null;
   setSignedUser: (user: User | null) => void;
-}
+};

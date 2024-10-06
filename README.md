@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+DESAFIO 1 - PED CICLO 2 2024
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Integrantes
 
-Currently, two official plugins are available:
+- Eduardo Ezequiel López Rivera - LR230061
+- Diego Guillermo Esnard Romero - ER231474
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Instrucciones para ejecutar el proyecto
 
-## Expanding the ESLint configuration
+- Se necesita la versión 20.17.0 LTS o superior de Node.js
+- Ejecutar `npm install` para instalar dependencias
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# En modo desarrollo
 
-- Configure the top-level `parserOptions` property like this:
+Para ejecutar una instancia del servidor de desarrollo, ejecutar los siguientes comandos:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+- Ejecutar `npm run dev` para ejecutar la aplicación web, estará disponible de forma local en http://localhost:5173/
+- Ejecutar `npm run json-db` en otra terminal para ejecutar json-server y poder trabajar con la API REST y la data del archivo db.json
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# En modo producción
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
+Para ejecutar una instancia del servidor en producción, ejecutar los siguientes comandos:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-});
-```
+- Ejecutar `npm run build` para construir la aplicación
+- A partir de este punto, tendremos generada la carpeta `/dist` que contiene la aplicación web lista para producción, por consecuente necesitamos servir estos archivos con la ayuda de una herramienta, utilizaremos `serve`, ejecutamos los siguientes comandos en la carpeta principal del proyecto:
+
+> ```sh
+> npm install -g serve
+> serve -s dist -l 5000
+> ```
+
+- No olvidar ejecutar `npm run json-db` en otro terminal para tener disponible la API REST.

@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form';
 import { ErrorLabel, Label } from '../../../components';
-import { SignInForm as ISignInForm } from '../interfaces';
+import { SignInForm as ISignInForm } from '../types';
 import { toast } from 'react-toastify';
-import { signIn } from '../services';
 import { useNavigate } from 'react-router-dom';
+import { SignInService } from '../services';
 
 export const SignInForm = () => {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ export const SignInForm = () => {
   } = useForm<ISignInForm>();
 
   const onSubmit = async (formData: ISignInForm) => {
-    const isValid = await signIn(formData);
+    const isValid = await SignInService.signIn(formData);
 
     if (isValid) {
       toast.success('Inicio de sesión exitoso');
